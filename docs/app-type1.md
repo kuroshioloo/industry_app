@@ -67,28 +67,8 @@ https://cloud.industry.com/app/v1/:appname/products?<公共请求参数>&..
 {
     "action": "add",
     "product_list": [{
-        "product_id": "JSUHEDGJAHAUK",
+        "id": 1002,
         "name": "人流密度",
-        "category": "Personnel testing class",
-        "profile": "基于动态视频实时统计大型活动现场人流密度、变化趋势等，进行数据采集，实现突发事件预警，现场安全把控等。",
-        "profile_media": ["http://static3.extremevision.com.cn/group1/M00/00/54/CqHxLlsjNTOEKl01AAAAAMYFb7M633.mp4",
-            "http://static.extremevision.com.cn/donkey_13806c8c-6a03-4d16-81fc-194cd8008b37.jpg"
-        ],
-        "version": "1.1.0",
-        "rate": 0.02,
-        "extended_info": {
-            "interface": "https://api.cvmart.net/api/algo/face",
-            "request": "",
-            "response": "",
-            "average_delay": 280,
-            "max_qps": 120,
-            "performance": {
-                "frame_of_reference": ["http://static.extremevision.com.cn/donkey_0df8ddf6-5c0c-4ce7-9543-9922a21d7f32.jpg", "http://static.extremevision.com.cn/donkey_0df8ddf6-5c0c-4ce7-9543-9922a21d7f32.jpg"],
-                "accuracy": 0.825,
-                "precision": 0.764,
-                "recall": 0.312
-            }
-        }
     }]
 }
 ```
@@ -105,25 +85,8 @@ product_list的字段说明：
 
 | 参数名称 | 必选 | 描述 |
 | :- | :- | :- |
-| product_id | 是 | 唯一ID(应用平台内部唯一) |
+| id | 是 | 唯一ID(应用平台内部唯一) |
 | name | 是 | 产品名称 |
-| category | 是 | 产品分类(平台提供枚举) |
-| profile | 是 | 产品简介 |
-| profile_media | 是 | 产品描述图片/视频列表 |
-| version | 是 | 产品版本 |
-| rate | 是 | 计费说明(暂时只支持计次，单位: 元/千次) |
-| extended_info | 是 | 产品专有信息(json格式的扩展信息，对接时做额外说明) |
-
-extended_info示例字段说明：
-
-| 参数名称 | 必选 | 描述 |
-| :- | :- | :- |
-| interface | 否 | 产品接口 |
-| request | 否 | 请求参数和说明 |
-| response | 否 | 返回参数和说明 |
-| average_delay | 否 | 平均参考时延(ms) |
-| max_qps | 否 | 最大并发量 |
-| performance | 否 | 算法性能说明：包括标准参照系、准确率、精确率和召回率指标 |
 
 返回内容：
  
