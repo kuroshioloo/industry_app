@@ -1,1 +1,1 @@
-# industry_app
+# industry-app

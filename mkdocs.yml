@@ -1,0 +1,45 @@
+site_name: 腾讯工业云
+theme: readthedocs
+
+nav:
+  - 应用平台接入说明: index.md
+  - 无用户身份的应用平台接入: app-type1.md
+
+extra:
+  palette:
+    primary: 'cyan'
+    accent: 'purple'
+
+extra_javascript:
+  - js/mermaid.min.js
+  - js/raphael.min.js
+  - js/underscore-min.js
+  - js/sequence-diagram-min.js
+  - js/flowchart.min.js
+  - js/umlconvert.js
+
+markdown_extensions:
+  - toc:
+        permalink: True
+        baselevel: 2
+        separator: "_"
+  - smarty
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences: [
+            {name: flow, class: uml-flowchart}
+           ,{name: sequence, class: uml-sequence-diagram}
+           ,{name: mermaid, class: uml-mermaid}
+      ]
+
+plugins:
+  - search
